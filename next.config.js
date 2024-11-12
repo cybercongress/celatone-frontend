@@ -6,12 +6,14 @@ const SENTRY_DSN =
   "https://examplePublicKey@o0.ingest.sentry.io/0";
 
 const nextConfig = {
+  output: "export",
   swcMinify: true,
   reactStrictMode: true,
   eslint: {
     dirs: ["src"],
   },
   images: {
+    unoptimized: true,
     domains: [
       "raw.githubusercontent.com",
       "i.ibb.co",
@@ -114,15 +116,17 @@ const nextConfig = {
   },
 };
 
-const moduleExports = {
-  ...nextConfig,
+module.exports = nextConfig;
 
-  sentry: {
-    hideSourceMaps: true,
-    tunnelRoute: "/sentry",
-  },
-};
+// const moduleExports = {
+//   ...nextConfig,
 
-module.exports = withSentryConfig(moduleExports, {
-  dryRun: true,
-});
+//   sentry: {
+//     hideSourceMaps: true,
+//     tunnelRoute: "/sentry",
+//   },
+// };
+
+// module.exports = withSentryConfig(moduleExports, {
+//   dryRun: true,
+// });
