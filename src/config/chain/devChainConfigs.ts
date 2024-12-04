@@ -99,6 +99,102 @@ export const devChainConfigs: ChainConfig[] = [
       ],
     },
   },
+  {
+    tier: "lite",
+    chainId: "space-pussy",
+    chain: "space-pussy",
+    registryChainName: "space-pussy",
+    prettyName: "Space pussy",
+    lcd: "https://lcd.space-pussy.cybernode.ai",
+    rpc: "https://rpc.space-pussy.cybernode.ai",
+    wallets: ["keplr"],
+    features: {
+      wasm: {
+        enabled: true,
+        storeCodeMaxFileSize: 1_048_576,
+        clearAdminGas: 1_048_576,
+      },
+      move: {
+        enabled: false,
+      },
+      evm: {
+        enabled: false,
+      },
+      pool: {
+        enabled: false,
+      },
+      publicProject: {
+        enabled: false,
+      },
+      gov: {
+        enabled: true,
+        version: "v1",
+        hideOpenProposal: true,
+      },
+      nft: {
+        enabled: false,
+      },
+    },
+    gas: {
+      gasAdjustment: 1.5,
+      maxGasLimit: 20_000_000,
+    },
+    extra: {
+      layer: "1",
+    },
+    network_type: "testnet",
+    logo_URIs: {
+      png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.png",
+      svg: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.svg",
+    },
+    fees: {
+      fee_tokens: [
+        {
+          denom: "pussy",
+          fixed_min_gas_price: 0.2,
+          low_gas_price: 0.2,
+          average_gas_price: 0.2,
+          high_gas_price: 0.5,
+        },
+      ],
+    },
+    registry: {
+      bech32_prefix: "pussy",
+      slip44: 118,
+      staking: {
+        staking_tokens: [
+          {
+            denom: "pussy",
+          },
+        ],
+      },
+      assets: [
+        {
+          description: "The native token of Space Pussy",
+          denom_units: [
+            {
+              denom: "pussy",
+              exponent: 0,
+            },
+          ],
+          base: "boot",
+          display: "PUSSY",
+          name: "Pussy Native Token",
+          symbol: "PUSSY",
+          images: [
+            {
+              png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.png",
+              svg: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.svg",
+            },
+          ],
+          logo_URIs: {
+            png: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.png",
+            svg: "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.svg",
+          },
+        },
+      ],
+    },
+  },
   // {
   //   tier: "lite",
   //   chainId: "localinitia",
